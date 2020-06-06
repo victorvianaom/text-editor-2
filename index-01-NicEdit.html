@@ -2,25 +2,18 @@
 <head>
   <title>How to Create textarea into a rich content/text editor using jQuery</title>  
   <script type="text/javascript" src="nicEdit-latest.js"></script>
+  <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+						
   <script type="text/javascript">
-//<![CDATA[
+    //<![CDATA[
   bkLib.onDomLoaded(function() {
         new nicEditor({maxHeight : 200}).panelInstance('area');
         new nicEditor({fullPanel : true,maxHeight : 200}).panelInstance('area1');
   });
   //]]>
   </script>
-  <script type="text/javascript">
-    bkLib.onDomLoaded(function() { nicEditors.allTextAreas() }); // convert all text areas to rich text editor on that page
 
-    bkLib.onDomLoaded(function() {
-         new nicEditor().panelInstance('area1');
-    }); // convert text area with id area1 to rich text editor.
-
-    bkLib.onDomLoaded(function() {
-         new nicEditor({fullPanel : true}).panelInstance('area2');
-    }); // convert text area with id area2 to rich text editor with full panel.
-    </script>
 </head>
 <body>
 <h4>How to Create textarea into a rich content/text editor using jQuery</h4>
