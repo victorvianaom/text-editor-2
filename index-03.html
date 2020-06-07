@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Editor 03</title>
+</head>
+<body>
+    <button id="btnFraction">Fraction</button>
+    <div id="textEditor" style="width: 400px; height: 100px; border: black 2px solid;"></div>
+    
+    <script>
+        btnFraction.addEventListener('click', function() {
+            span = document.createElement('span')
+            span.setAttribute('id', 'blockFraction')
+            textEditor.appendChild(span)
+        })
+
+        textEditor.addEventListener('click', function() {
+            document.addEventListener('keydown', function(event) {
+                console.log('keydown on textEditor')
+                keyPressed = event.key
+                keyNode = document.createTextNode(keyPressed)
+                textEditor.appendChild(keyNode)
+            })           
+        })
+    </script>
+</body>
+</html>
